@@ -1,10 +1,21 @@
 var apiKey = '1aff574ed48741ba7206ee656efcd85a';
-var apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=Phoenix&units=metric&appid=${apiKey}`;
 
+var cityName = 'Phoenix';
+var lon = '33.4484';
+var lat = '-112.0740';
+
+// https://api.openweathermap.org/data/2.5/forecast?lat=-112.0740&lon=33.4484&appid=1aff574ed48741ba7206ee656efcd85a
+//var fiveDayApi = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+var fiveDayApi = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey;
+console.log(fiveDayApi);
 
 //var forecastApi = `https://api.openweathermap.org/data/2.5/weather?q=${city}&date={date}&current.temp={current.temp}&current.wind_speed={current.wind_speed}&current.humidity={current.humidity}&appid=${apiKey}`;
 var currentWeatherApi = `https://api.openweathermap.org/data/2.5/weather?q=Phoenix&appid=${apiKey}`;
 //the above api gives me everything except the 5 day forecast and date. use it to display the current weather
+
+
+//use currentWeatherApi for base info and then parse the lat and lon from it to use in the apiUrl for the 5 day forecast
+
 
 //var city = 'Phoenix';
 // apiURL that displays the city name, the date, 
@@ -12,15 +23,17 @@ var currentWeatherApi = `https://api.openweathermap.org/data/2.5/weather?q=Phoen
 //the humidity, the wind speed, and the UV index
 
 
-fetch(apiUrl)
+fetch(fiveDayApi)
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error(error));
 
-    fetch(currentWeatherApi)
+fetch(currentWeatherApi)
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error(error));
+
+    
 
     //what I need from the api for current weather:
     //city name
