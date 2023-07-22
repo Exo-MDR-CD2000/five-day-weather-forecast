@@ -22,6 +22,7 @@
                 <input type="text" class="form-control" id="city" placeholder="Enter City Name Here">
                 <button type="button" class="btn btn-primary btn-lg px-4 gap-3" id="search">Search</button>
             </div>
+            
 
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <div class="alert alert-danger" role="alert" id="error" style="display: none;">
@@ -31,6 +32,30 @@
         </div>
     </div>
         <!-- the above adds a basic text area with a search bar for the city -->
+
+        <!-- Add a bootstrap container to display main city weather for current day -->
+
+        <div class="container my-xxl-4 py-4 mb-5 justify-content-center card" style="max-width: 800px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                        src="http://openweathermap.org/img/wn/10d@4x.png"
+                        class="card-img-top"
+                        alt="Weather description"
+                        />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Today's Forecast</h5>
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Temp: </li>
+                      <li class="list-group-item">Wind: </li>
+                      <li class="list-group-item">Humidity: </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 
         <!-- below are the five day weather cards. Will need to hide them using js and make them appear after the button is clicked. -->
         <main class="container px-0">
