@@ -22,15 +22,23 @@
                 <input type="text" class="form-control" id="city" placeholder="Enter City Name Here">
                 <button type="button" class="btn btn-primary btn-lg px-4 gap-3" id="search">Search</button>
             </div>
-            
-
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <div class="alert alert-danger m-3" role="alert" id="error" style="display: none;">
+                <div class="alert alert-danger m-3" role="alert" id="error" style=>
                     Please enter a valid city name
                 </div>
             </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Recent Cities
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="searchHistory">
+                <!-- search history items will be added here -->
+              </div>
+            </div>
         </div>
     </div>
+
+    
         <!-- the above adds a basic text area with a search bar for the city -->
 
         <!-- Add a bootstrap container to display main city weather for current day -->
