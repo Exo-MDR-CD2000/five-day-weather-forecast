@@ -42,6 +42,7 @@ fetch(currentWeatherApi)
     //wind speed
     //humidity
 
+    //also, put measurements in imperial units using units=imperial in the api call
 
     //What I need for the each 5 day weather card:
     //date
@@ -57,4 +58,10 @@ fetch(currentWeatherApi)
     // and have a city history list below the search bar.
 
     //use localstorage for that city history list
+
+//LINKS
+
+//https://openweathermap.org/current#name  for current weather
+
+//https://openweathermap.org/forecast5 for 5 day forecast
 
