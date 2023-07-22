@@ -14,6 +14,23 @@
     <!-- https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=1aff574ed48741ba7206ee656efcd85a -->
 </head>
 <body>
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">Five Day Forecast</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Enter a city to get a five day forecast</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <input type="text" class="form-control" id="city" placeholder="Enter City Name Here">
+                <button type="button" class="btn btn-primary btn-lg px-4 gap-3" id="search">Search</button>
+            </div>
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <div class="alert alert-danger" role="alert" id="error" style="display: none;">
+                    Please enter a valid city name
+                </div>
+            </div>
+        </div>
+        <!-- the above adds a basic text area with a search bar for the city -->
+
 
     
     
