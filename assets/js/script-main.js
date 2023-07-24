@@ -98,6 +98,7 @@ fetch(urlForecast)
   .catch((error) => console.error('Error:', error));
 
 
-
+//the five day forecast api does have data for the city name, date, temperature, wind speed, and humidity
+//Had to ctrl + f on the docs to find it. It's under the "city" object.
 
 
