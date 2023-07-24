@@ -69,9 +69,11 @@
 
 var city = 'Phoenix'; // replace with your city
 var apiKey = '1aff574ed48741ba7206ee656efcd85a'; // replace with your API key
+var imperial = 'imperial'; // sets units to imperial
 
-var urlCurrent = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-var urlForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+
+var urlCurrent = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${imperial}&appid=${apiKey}`;
+var urlForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${imperial}&appid=${apiKey}`;
 
 // Current weather
 fetch(urlCurrent)
@@ -101,5 +103,8 @@ fetch(urlForecast)
 //the five day forecast api does have data for the city name, date, temperature, wind speed, and humidity
 //Had to ctrl + f on the docs to find it. It's under the "city" object.
 //No need to use lat or lon! It's strange that the example api url's dont show that you can use the ?q=city parameter
+
+
+//specific api data to parse:
 
 
