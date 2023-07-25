@@ -160,15 +160,6 @@ function processCitySearch(city) {
 
   // now make the function to fetch current weather and 5 day forecast using the urlCurrent & urlForecast variable
 
-  // fetch(urlCurrent)
-  // .then((response) => {
-  //   if (response.ok) {
-  //     return response.json();
-  //   } else {
-  //     throw new Error('Error:', response.statusText);
-  //   }
-  // })
-
 
   fetch(urlCurrent)
   .then(function(response) {
@@ -178,17 +169,16 @@ function processCitySearch(city) {
       throw new Error('Error:', response.statusText);
     }
   })
-  //.then((data) => console.log('Current weather:', data)) //the fulfilled promise called 'Current weather' is the data
-  
-.then(function(data) {
-  console.log('Current weather:', data);
-  var currentWeather = data;
-  displayWeatherData(currentWeather);
-})
-  //.catch((error) => console.error('Error:', error));
-  .catch(function(error) {
-    console.error(error);
-  });
+
+  .then(function(data) {
+    console.log('Current weather:', data);
+    var currentWeather = data;
+    displayWeatherData(currentWeather);
+  })
+
+    .catch(function(error) {
+      console.error(error);
+    });
    
 //i think this is how we did it in class above. below is the other way of doing it
 //though i still don't know what that => arrow function is doing
