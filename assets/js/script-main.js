@@ -107,12 +107,32 @@ fetch(urlForecast)
 //i should probably get the data I need from the api first before making the event listener
 
 
-function currentWeatherParams() {
-    
-    
-}
+//event listener for the search bar
 
+document.getElementById('city-box').addEventListener('keydown', function(e) {
+  var city = document.getElementById('city-box').value;
+    if (e.key === 'Enter') {
+      console.log(city);
+       if (city === '') {
+        document.getElementById('error').style.display = 'block';
+        setTimeout(function() {
+          document.getElementById('error').style.display = 'none';
+        }, 3000);
+       } else {
+        processCitySearch(city);
+       }
+    }
+});
 
+document.getElementById('search-button').addEventListener('click', function() {
+    var city = document.getElemenmtById('city-box').value;
+    console.log(city);
+    if (city === '') {
+        document.getElementById('error').style.display = 'block';
+    } else {
+        processCitySearch(city);
+    }
+});
 
 
 function mainApp(event) {
@@ -131,7 +151,8 @@ function mainApp(event) {
 
 
 
-
+//get index 0-4 of the 5 day forecast array
+//its from the list object
 
 //the five day forecast api does have data for the city name, date, temperature, wind speed, and humidity
 //Had to ctrl + f on the docs to find it. It's under the "city" object.
