@@ -109,18 +109,21 @@ fetch(urlForecast)
 
 
   city.addEventListener('click', function() {
-    console.log('clicked');
-  }
-    );
+     console.log('clicked');
+  });
 
   // id="button-history"
 
-cityHistory.addEventListener('click', function() {
-    console.log('clicked');
-    }
-);
+    cityHistory.addEventListener('click', function() {
+     console.log('clicked');
+    });
 
-app();
+
+    app();
+}
+
+    
+
 
 //the five day forecast api does have data for the city name, date, temperature, wind speed, and humidity
 //Had to ctrl + f on the docs to find it. It's under the "city" object.
