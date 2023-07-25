@@ -124,15 +124,24 @@ document.getElementById('city-box').addEventListener('keydown', function(e) {
     }
 });
 
-document.getElementById('search-button').addEventListener('click', function() {
-    var city = document.getElemenmtById('city-box').value;
+//processCitySearch will be the function that takes the city name and uses it to make the api calls
+
+document.getElementById('search-btn').addEventListener('click', function() {
+    var city = document.getElementById('city-box').value;
     console.log(city);
-    if (city === '') {
-        document.getElementById('error').style.display = 'block';
+    if (city) {
+      console.log(city);
+      processCitySearch(city);
     } else {
-        processCitySearch(city);
+        document.getElementById('error').style.display = 'block';
+        setTimeout(function() {
+          document.getElementById('error').style.display = 'none';
+        }, 3000);
     }
 });
+
+
+//processCitySearch will be the function that takes the city name and uses it to make the api calls
 
 
 function mainApp(event) {
