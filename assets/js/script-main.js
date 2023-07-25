@@ -118,11 +118,9 @@ fetch(urlForecast)
      console.log('clicked');
     });
 
+};
 
-    app();
-}
-
-    
+app();
 
 
 //the five day forecast api does have data for the city name, date, temperature, wind speed, and humidity
