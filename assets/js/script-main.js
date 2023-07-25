@@ -147,15 +147,25 @@ document.getElementById('search-btn').addEventListener('click', function() {
 //processCitySearch will be the function that takes the city name and uses it to make the api calls
 
 
-function mainApp(event) {
-    event.preventDefault(); //prevent page from reloading
+function processCitySearch(city) {
+    
 
-    var city = document.getElementById('search'); // replace with your city
     var apiKey = '1aff574ed48741ba7206ee656efcd85a'; // replace with your API key
     var imperial = 'imperial'; // sets units to imperial
 
     var urlCurrent = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${imperial}&appid=${apiKey}`; // Current weather
     var urlForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${imperial}&appid=${apiKey}`; // 5 day forecast
+
+  console.log(urlCurrent); // city name is properly displayed in the url
+  
+    fetch(urlCurrent)
+      .then(function(response) {
+        if (!response.ok) {
+          throw response.json();
+
+        }
+        return response.json();
+      });
 
     // now make the function for the current weather using the urlCurrent variable
     // use var 'city' for the event listener
