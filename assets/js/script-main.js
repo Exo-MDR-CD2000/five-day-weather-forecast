@@ -107,13 +107,9 @@ fetch(urlForecast)
 //i should probably get the data I need from the api first before making the event listener
 
 
-function currentWeatherParams(cityName, date, temp, wind, humidity) { //i need these parameters to display the current weather
-  
-
-
-
-
-
+function currentWeatherParams() {
+    
+    
 }
 
 
