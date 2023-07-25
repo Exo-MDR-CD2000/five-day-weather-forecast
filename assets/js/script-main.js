@@ -66,14 +66,20 @@
 //https://openweathermap.org/forecast5 for 5 day forecast
 
 
+// /id="search" for search bar
 
-var city = 'Phoenix'; // replace with your city
+function app () {
+
+
+var city = document.getElementById('search'); // replace with your city
+var cityHistory = document.getElementById('button-history');
+
 var apiKey = '1aff574ed48741ba7206ee656efcd85a'; // replace with your API key
 var imperial = 'imperial'; // sets units to imperial
 
 
-var urlCurrent = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${imperial}&appid=${apiKey}`;
-var urlForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${imperial}&appid=${apiKey}`;
+var urlCurrent = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${imperial}&appid=${apiKey}`; // Current weather
+var urlForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${imperial}&appid=${apiKey}`; // 5 day forecast
 
 // Current weather
 fetch(urlCurrent)
@@ -99,6 +105,22 @@ fetch(urlForecast)
   .then((data) => console.log('5 day forecast:', data)) //the fulfilled promise called '5 day forecast' is the data
   .catch((error) => console.error('Error:', error));
 
+
+
+
+  city.addEventListener('click', function() {
+    console.log('clicked');
+  }
+    );
+
+  // id="button-history"
+
+cityHistory.addEventListener('click', function() {
+    console.log('clicked');
+    }
+);
+
+app();
 
 //the five day forecast api does have data for the city name, date, temperature, wind speed, and humidity
 //Had to ctrl + f on the docs to find it. It's under the "city" object.
