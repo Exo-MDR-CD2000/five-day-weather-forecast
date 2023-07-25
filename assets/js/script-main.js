@@ -112,7 +112,7 @@ fetch(urlForecast)
 document.getElementById('city-box').addEventListener('keydown', function(e) {
   var city = document.getElementById('city-box').value;
     if (e.key === 'Enter') {
-      console.log(city);
+      console.log('enter event:', city);
        if (city === '') {
         document.getElementById('error').style.display = 'block';
         setTimeout(function() {
@@ -130,9 +130,8 @@ document.getElementById('city-box').addEventListener('keydown', function(e) {
 
 document.getElementById('search-btn').addEventListener('click', function() {
     var city = document.getElementById('city-box').value;
-    console.log(city);
     if (city) {
-      console.log(city);
+      console.log('button event:', city);
       processCitySearch(city);
     } else {
         document.getElementById('error').style.display = 'block';
@@ -156,19 +155,23 @@ function processCitySearch(city) {
     var urlCurrent = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${imperial}&appid=${apiKey}`; // Current weather
     var urlForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${imperial}&appid=${apiKey}`; // 5 day forecast
 
-  console.log(urlCurrent); // city name is properly displayed in the url
-  
-    fetch(urlCurrent)
-      .then(function(response) {
-        if (!response.ok) {
-          throw response.json();
+  console.log('check to see if city name is in url', urlCurrent); // city name is properly displayed in the url
+  console.log('check to see if city name is in url', urlForecast); // city name is properly displayed in the url
 
-        }
-        return response.json();
-      });
+  // now make the function for the current weather using the urlCurrent variable
 
-    // now make the function for the current weather using the urlCurrent variable
-    // use var 'city' for the event listener
+  fetch(urlCurrent)
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('Error:', response.statusText);
+    }
+  })
+  .then((data) => console.log('Current weather:', data)) //the fulfilled promise called 'Current weather' is the data
+  .catch((error) => console.error('Error:', error));
+   
+    
 }
 
 
