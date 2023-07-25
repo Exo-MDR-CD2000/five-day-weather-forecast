@@ -158,20 +158,40 @@ function processCitySearch(city) {
   console.log('check to see if city name is in url', urlCurrent); // city name is properly displayed in the url
   console.log('check to see if city name is in url', urlForecast); // city name is properly displayed in the url
 
-  // now make the function for the current weather using the urlCurrent variable
+  // now make the function to fetch current weather and 5 day forecast using the urlCurrent & urlForecast variable
+
+  // fetch(urlCurrent)
+  // .then((response) => {
+  //   if (response.ok) {
+  //     return response.json();
+  //   } else {
+  //     throw new Error('Error:', response.statusText);
+  //   }
+  // })
+
 
   fetch(urlCurrent)
-  .then((response) => {
+  .then(function(response) {
     if (response.ok) {
       return response.json();
     } else {
       throw new Error('Error:', response.statusText);
     }
   })
-  .then((data) => console.log('Current weather:', data)) //the fulfilled promise called 'Current weather' is the data
-  .catch((error) => console.error('Error:', error));
+  //.then((data) => console.log('Current weather:', data)) //the fulfilled promise called 'Current weather' is the data
+  
+.then(function(data) {
+  console.log('Current weather:', data);
+  var currentWeather = data;
+  displayWeatherData(currentWeather);
+})
+  //.catch((error) => console.error('Error:', error));
+  .catch(function(error) {
+    console.error(error);
+  });
    
-
+//i think this is how we did it in class above. below is the other way of doing it
+//though i still don't know what that => arrow function is doing
 
   fetch(urlForecast)
   .then((response) => {
@@ -181,20 +201,25 @@ function processCitySearch(city) {
       throw new Error('Error:', response.statusText);
     }
   })
-  .then((data) => console.log('5 Day Forecast:', data)) //the fulfilled promise called 'Current weather' is the data
-  .catch((error) => console.error('Error:', error));
+  .then((data) => console.log('5 Day Forecast:', data)) //the fulfilled promise called '5 day forecast' is the data
+  .then((data) => displayForecastData(data)) //the fulfilled promise called '5 day forecast' is the data
+  .catch((error) => console.error(error));
   //so i got fetching from user input to work. now i need to get the data from the api to display on the page
     
 };
 
-function displayCurrentWeather() {
-  
+function displayWeatherData() {
+
   
   
 
 }
 
 
+
+function displayForecastData() {
+
+}
 //get index 0-4 of the 5 day forecast array
 //its from the list object
 
