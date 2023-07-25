@@ -124,6 +124,8 @@ document.getElementById('city-box').addEventListener('keydown', function(e) {
     }
 });
 
+//fully functional event listener for the search bar pressing enter
+
 //processCitySearch will be the function that takes the city name and uses it to make the api calls
 
 document.getElementById('search-btn').addEventListener('click', function() {
@@ -140,6 +142,7 @@ document.getElementById('search-btn').addEventListener('click', function() {
     }
 });
 
+//fully functional event listener for the search button
 
 //processCitySearch will be the function that takes the city name and uses it to make the api calls
 
