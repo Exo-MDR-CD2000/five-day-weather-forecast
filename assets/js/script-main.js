@@ -64,16 +64,12 @@
 //https://openweathermap.org/current#name  for current weather
 
 //https://openweathermap.org/forecast5 for 5 day forecast
+ 
 
 
-// /id="search" for search bar
 
-function app () {
-
-
-var city = document.getElementById('search'); // replace with your city
-var cityHistory = document.getElementById('button-history');
-
+//var city = document.getElementById('search'); // replace with your city
+var city = 'Phoenix';
 var apiKey = '1aff574ed48741ba7206ee656efcd85a'; // replace with your API key
 var imperial = 'imperial'; // sets units to imperial
 
@@ -106,21 +102,39 @@ fetch(urlForecast)
   .catch((error) => console.error('Error:', error));
 
 
+  //for 5 day forecast, index 0 starts on the following day. for example: today is 7/24/2023 so index 0 is 7/25/2023
+
+//i should probably get the data I need from the api first before making the event listener
 
 
-  city.addEventListener('click', function() {
-     console.log('clicked');
-  });
+function currentWeatherParams(cityName, date, temp, wind, humidity) { //i need these parameters to display the current weather
+  
 
-  // id="button-history"
 
-    cityHistory.addEventListener('click', function() {
-     console.log('clicked');
-    });
 
-};
 
-app();
+
+}
+
+
+
+
+function mainApp(event) {
+    event.preventDefault(); //prevent page from reloading
+
+    var city = document.getElementById('search'); // replace with your city
+    var apiKey = '1aff574ed48741ba7206ee656efcd85a'; // replace with your API key
+    var imperial = 'imperial'; // sets units to imperial
+
+    var urlCurrent = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${imperial}&appid=${apiKey}`; // Current weather
+    var urlForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${imperial}&appid=${apiKey}`; // 5 day forecast
+
+    // now make the function for the current weather using the urlCurrent variable
+    // use var 'city' for the event listener
+}
+
+
+
 
 
 //the five day forecast api does have data for the city name, date, temperature, wind speed, and humidity
