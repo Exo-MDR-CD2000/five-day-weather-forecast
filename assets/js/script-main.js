@@ -245,6 +245,12 @@ function parseWeatherData(currentWeather) {
   
   
 }
+
+function parseForecastData(data) {
+
+
+  
+}
 //get index 0-4 of the 5 day forecast array
 //its from the list object
 
