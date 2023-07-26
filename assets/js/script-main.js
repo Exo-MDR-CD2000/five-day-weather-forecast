@@ -154,10 +154,10 @@ function processCitySearch(city) {
 
     var urlCurrent = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${imperial}&appid=${apiKey}`; // Current weather
     var urlForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${imperial}&appid=${apiKey}`; // 5 day forecast
-
+    //var urlForecastTest = `http://api.openweathermap.org/data/3.0/onecall?city=${city}&appid=${apiKey}&units=${imperial}`;
   console.log('check to see if city name is in url', urlCurrent); // city name is properly displayed in the url
   console.log('check to see if city name is in url', urlForecast); // city name is properly displayed in the url
-
+  //console.log('weather one call test', urlForecastTest); // city name is properly displayed in the url
   // now make the function to fetch current weather and 5 day forecast using the urlCurrent & urlForecast variable
 
 
@@ -199,6 +199,25 @@ fetch(urlForecast)
     .catch(error => console.error(error));
   };
 
+
+  // fetch(urlForecastTest)
+  // .then(function(response) {
+  //   if (response.ok) {
+  //     return response.json();
+  //   } else {
+  //     throw new Error('Error:', response.statusText);
+  //   }
+  // })
+
+  // .then(function(data) {
+  //   console.log('api test from raw fetch:', data);
+  //   var weatherTest = data;
+  //   parseWeatherTestData(weatherTest);
+  // })
+
+  // .catch(function(error) {
+  //   console.error(error);
+  // });
 
 
   
@@ -313,8 +332,50 @@ function parseWeatherData(currentWeather) {
 function parseForecastData(currentForecast) {
   console.log('parse forecast data to get needed info:', currentForecast);
   
+  // Create an object to store the weather data for each day
+  const dailyWeather = {};
+  
+  // Loop through each object in the list array
+  currentForecast.list.forEach((weatherData) => {
+    
+    // Get the date of the weather data
+    const date = weatherData.dt_txt.split(' ')[0];
+    
+    // If the date is not already in the dailyWeather object, add it
+    if (!dailyWeather[date]) {
+      dailyWeather[date] = {
+        temperature: [],
+        windSpeed: [],
+        humidity: []
+      };
+    }
+    
+    // Add the temperature, wind speed, and humidity to the dailyWeather object
+    dailyWeather[date].temperature.push(weatherData.main.temp);
+    dailyWeather[date].windSpeed.push(weatherData.wind.speed);
+    dailyWeather[date].humidity.push(weatherData.main.humidity);
+  });
+  
+  // Loop through each day in the dailyWeather object
+  for (const date in dailyWeather) {
+    // Find the maximum wind speed and humidity for the day
+    const maxWindSpeed = Math.max(...dailyWeather[date].windSpeed);
+    const maxHumidity = Math.max(...dailyWeather[date].humidity);
+    
+    // Update the dailyWeather object with the maximum wind speed and humidity
+    dailyWeather[date].windSpeed = maxWindSpeed;
+    dailyWeather[date].humidity = maxHumidity;
+  }
+  
+  console.log('daily weather:', dailyWeather);
 };
 
+//reverse engineer code example above to understand how it grabs the data from the
+//5 day forecast api. it seems to create an empty object called dailyWeather and then
+//loops through the data to get the dates and then the temperature, wind speed, and humidity
+//it adds the temperature, wind speed, and humidity to the dailyWeather object
+//but then also uses some math to find the max wind speed and humidity for the day.
+//the temperature is already the max temperature for the day so it doesn't need to be found.
 
   
 // }
