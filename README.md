@@ -40,6 +40,6 @@ WIP
 
 ## Deployment Link
 
-Deployed Page: [Github Deployed Page](WIP)
+Deployed Page: [Github Deployed Page](https://exo-mdr-cd2000.github.io/five-day-weather-forecast/)
 
 Github repo: [Five Day Weather](https://github.com/Exo-MDR-CD2000/five-day-weather-forecast)
