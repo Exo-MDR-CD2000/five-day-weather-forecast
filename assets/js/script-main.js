@@ -258,7 +258,7 @@ function parseWeatherData(currentWeather) {
 
   document.getElementById('current-icon').textContent = currentIcon;
   
-  //add &deg;F to the temperature value dynamically
+  //add code to display the weather icon
   
   
   
