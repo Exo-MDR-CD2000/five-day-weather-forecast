@@ -173,7 +173,7 @@ function processCitySearch(city) {
   .then(function(data) {
     console.log('Current weather:', data);
     var currentWeather = data;
-    displayWeatherData(currentWeather);
+    parseWeatherData(currentWeather);
   })
 
     .catch(function(error) {
@@ -192,23 +192,26 @@ function processCitySearch(city) {
     }
   })
   .then((data) => console.log('5 Day Forecast:', data)) //the fulfilled promise called '5 day forecast' is the data
-  .then((data) => displayForecastData(data)) //the fulfilled promise called '5 day forecast' is the data
+  .then((data) => parseForecastData(data)) //the fulfilled promise called '5 day forecast' is the data
   .catch((error) => console.error(error));
   //so i got fetching from user input to work. now i need to get the data from the api to display on the page
     
 };
 
-function displayWeatherData() {
+
+
+function parseWeatherData(currentWeather) {
+  console.log('parse current weather to get needed info:', currentWeather);
+  //parse the data from the api to display on the page
+  //city name
+  //date
+  //temperature
+  //wind speed
+  //humidity
 
   
   
-
-}
-
-
-
-function displayForecastData() {
-
+  
 }
 //get index 0-4 of the 5 day forecast array
 //its from the list object
