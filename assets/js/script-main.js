@@ -226,8 +226,14 @@ function parseWeatherData(currentWeather) {
   document.getElementById('current-humidity').textContent = currentHumidity + ('%');
 
   
-  function currentDate() {
+  function currentWeatherIcon() {
+    var currentIcon = currentWeather.weather[0].icon; //this gets the icon code from the api\
+    var currentIconUrl = 'http://openweathermap.org/img/w/' + currentIcon + '.png'; //this gets the icon url from the api
+    console.log(currentIconUrl);
+    console.log(currentWeatherIcon)
+    console.log('current icon:', currentIcon);
     
+  }
   
   //add &deg;F to the temperature value dynamically
   
