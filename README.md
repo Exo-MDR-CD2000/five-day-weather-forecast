@@ -24,6 +24,7 @@ WIP
   
 - [Bootstrap Dropdown Component](https://getbootstrap.com/docs/4.0/components/dropdowns/)
 
+- [Stack Overflow openweather icon help](https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon)
 
 ## Screenshot
 
