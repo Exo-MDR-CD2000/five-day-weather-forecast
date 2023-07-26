@@ -226,7 +226,8 @@ function parseWeatherData(currentWeather) {
   document.getElementById('current-humidity').textContent = currentHumidity + ('%');
 
   
-  function currentDate()
+  function currentDate() {
+    
   
   //add &deg;F to the temperature value dynamically
   

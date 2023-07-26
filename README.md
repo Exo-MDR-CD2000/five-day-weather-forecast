@@ -12,7 +12,7 @@ WIP
 
 - [WIP](WIP)
 
-- [WIP](WIP)
+- [JS Date Creation](https://www.freecodecamp.org/news/javascript-get-current-date-todays-date-in-js/)
 
 - [Bootstrap Card Component](https://getbootstrap.com/docs/5.0/components/card/)
   
