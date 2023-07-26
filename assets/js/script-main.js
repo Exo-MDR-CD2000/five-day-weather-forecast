@@ -206,12 +206,14 @@ function parseWeatherData(currentWeather) {
   var currentTemp = currentWeather.main.temp;
   var currentWind = currentWeather.wind.speed;
   var currentHumidity = currentWeather.main.humidity;
+  var currentIcon = currentWeather.weather[0].icon; //for icon id
 
 
   console.log('current city:', currentName);
   console.log('current temp:', currentTemp);
   console.log('current wind:', currentWind);
   console.log('current humidity:', currentHumidity);
+  console.log('current icon:', currentIcon);
 
   document.querySelector('.current-city').textContent = currentName;
   document.querySelector('.current-city').style.display = 'block';
@@ -225,15 +227,7 @@ function parseWeatherData(currentWeather) {
 
   document.getElementById('current-humidity').textContent = currentHumidity + ('%');
 
-  
-  function currentWeatherIcon() {
-    var currentIcon = currentWeather.weather[0].icon; //this gets the icon code from the api\
-    var currentIconUrl = 'http://openweathermap.org/img/w/' + currentIcon + '.png'; //this gets the icon url from the api
-    console.log(currentIconUrl);
-    console.log(currentWeatherIcon)
-    console.log('current icon:', currentIcon);
-    
-  }
+  document.getElementById('current-icon').textContent = currentIcon;
   
   //add &deg;F to the temperature value dynamically
   
