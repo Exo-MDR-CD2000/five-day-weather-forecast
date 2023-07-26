@@ -214,13 +214,19 @@ function parseWeatherData(currentWeather) {
   console.log('current humidity:', currentHumidity);
 
   document.querySelector('.current-city').textContent = currentName;
+  document.querySelector('.current-city').style.display = 'block';
+
+  document.querySelector('.current-date').style.display = 'block';
+
   document.getElementById('current-temp').textContent = currentTemp + (' °F');
   console.log(document.getElementById('current-temp'));
+
   document.getElementById('current-wind').textContent = currentWind + (' MPH');
+
   document.getElementById('current-humidity').textContent = currentHumidity + ('%');
 
   
-  
+  function currentDate()
   
   //add &deg;F to the temperature value dynamically
   
