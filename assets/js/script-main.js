@@ -212,18 +212,7 @@ function processCitySearch(city) {
 // }
 
 
-function getCurrentDate() {
-  var date = new Date();
-  var day = date.getDate();
-  var month = date.getMonth() + 1;
-  var year = date.getFullYear();
 
-  var today = month + '/' + day + '/' + year;
-  console.log(today);
-}
-
-// Call the function to execute the code
-getCurrentDate();
 
 
 //above taken from freecodecamp.org
@@ -243,9 +232,21 @@ function parseWeatherData(currentWeather) {
   console.log('current humidity:', currentHumidity);
   console.log('current icon:', currentIcon);
 
+
+  var date = new Date();
+  var day = date.getDate();
+  var month = date.getMonth() + 1;
+  var year = date.getFullYear();
+
+  var today = month + '/' + day + '/' + year;
+  console.log(today);
+
+  //current date fx above using vanilla js
+
   document.querySelector('.current-city').textContent = currentName;
   document.querySelector('.current-city').style.display = 'block';
 
+  document.querySelector('.current-date').textContent = today;
   document.querySelector('.current-date').style.display = 'block';
 
   document.getElementById('current-temp').textContent = currentTemp + (' °F');
