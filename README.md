@@ -4,7 +4,7 @@
 ## Description
 
 
-WIP
+The goal was to create a site and have it display the current weather and the five day forecast for a city. It needed to be responsive and allow us to udnerstand how to use data from a third party api.
 
 
 
@@ -27,6 +27,8 @@ WIP
 - [Stack Overflow openweather icon help](https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon)
 
 - [Free Code Camp time in JS](https://www.freecodecamp.org/news/javascript-get-current-date-todays-date-in-js/)
+
+- [Stack Overflow: Issues using 5 day api and cnt parameter](https://stackoverflow.com/questions/63222396/5-day-weather-forecast-on-openweathermap-not-giving-expected-result)
 
 ## Screenshot
 

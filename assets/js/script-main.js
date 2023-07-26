@@ -372,21 +372,7 @@ function parseForecastData(currentForecast) {
 
 //reverse engineer code example above to understand how it grabs the data from the
 //5 day forecast api. it seems to create an empty object called dailyWeather and then
-//loops through the data to get the dates and then the temperature, wind speed, and humidity
+//loops through the data to get the dates and then the temperature, wind speed, and humidity.
 //it adds the temperature, wind speed, and humidity to the dailyWeather object
 //but then also uses some math to find the max wind speed and humidity for the day.
 //the temperature is already the max temperature for the day so it doesn't need to be found.
-
-  
-// }
-//get index 0-4 of the 5 day forecast array
-//its from the list object
-
-//the five day forecast api does have data for the city name, date, temperature, wind speed, and humidity
-//Had to ctrl + f on the docs to find it. It's under the "city" object.
-//No need to use lat or lon! It's strange that the example api url's dont show that you can use the ?q=city parameter
-
-
-//specific api data to parse:
-
-
