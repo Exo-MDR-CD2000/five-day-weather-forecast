@@ -202,6 +202,27 @@ function processCitySearch(city) {
 
 function parseWeatherData(currentWeather) {
   console.log('parse current weather to get needed info:', currentWeather);
+  var currentName = currentWeather.name;
+  var currentTemp = currentWeather.main.temp;
+  var currentWind = currentWeather.wind.speed;
+  var currentHumidity = currentWeather.main.humidity;
+
+
+  console.log('current city:', currentName);
+  console.log('current temp:', currentTemp);
+  console.log('current wind:', currentWind);
+  console.log('current humidity:', currentHumidity);
+
+  document
+  
+  
+  
+  
+  
+  
+  
+  
+  
   //parse the data from the api to display on the page
   //city name
   //date
@@ -209,6 +230,14 @@ function parseWeatherData(currentWeather) {
   //wind speed
   //humidity
 
+
+  //looking at object data from the api, i need to get the following:
+  //name: "Phoenix"
+  //theres no date key in the object data so i'll just not include it
+  //main: {temp: 110}
+  //wind: {speed: 1.01}
+  //main: {humidity: 10}
+  //weather:{id: 802} the id corresponds to the weather icon
   
   
   
