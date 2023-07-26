@@ -26,6 +26,8 @@ WIP
 
 - [Stack Overflow openweather icon help](https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon)
 
+- [Free Code Camp time in JS](https://www.freecodecamp.org/news/javascript-get-current-date-todays-date-in-js/)
+
 ## Screenshot
 
 ![alt five day weather](WIP)

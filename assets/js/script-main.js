@@ -225,6 +225,7 @@ function parseWeatherData(currentWeather) {
   var currentHumidity = currentWeather.main.humidity;
   var currentIcon = currentWeather.weather[0].icon; //for icon id
 
+  //could have made these as an object to store the data as key value pairs
 
   console.log('current city:', currentName);
   console.log('current temp:', currentTemp);
