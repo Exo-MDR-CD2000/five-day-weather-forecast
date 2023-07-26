@@ -199,6 +199,17 @@ function processCitySearch(city) {
 };
 
 
+function parseCurrentweatherIcon(currentWeather) {
+  var currentIcon = currentWeather.weather[0].icon; //for icon id
+  console.log('current icon:', currentIcon);
+  var iconUrl = `http://openweathermap.org/img/w/${currentIcon}.png`;
+  var icon = document.querySelector('current-weather-icon')
+  icon.setAttribute('src', iconUrl);
+  icon.setAttribute('alt', 'weather icon');
+  console.log(icon);
+  
+  
+}
 
 function parseWeatherData(currentWeather) {
   console.log('parse current weather to get needed info:', currentWeather);
