@@ -74,8 +74,8 @@ var apiKey = '1aff574ed48741ba7206ee656efcd85a'; // replace with your API key
 var imperial = 'imperial'; // sets units to imperial
 
 
-var urlCurrent = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${imperial}&appid=${apiKey}`; // Current weather
-var urlForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${imperial}&appid=${apiKey}`; // 5 day forecast
+var urlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${imperial}&appid=${apiKey}`; // Current weather
+var urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${imperial}&appid=${apiKey}`; // 5 day forecast
 
 // Current weather
 fetch(urlCurrent)
@@ -152,8 +152,8 @@ function processCitySearch(city) {
     var apiKey = '1aff574ed48741ba7206ee656efcd85a'; // replace with your API key
     var imperial = 'imperial'; // sets units to imperial
 
-    var urlCurrent = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${imperial}&appid=${apiKey}`; // Current weather
-    var urlForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${imperial}&appid=${apiKey}`; // 5 day forecast
+    var urlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${imperial}&appid=${apiKey}`; // Current weather
+    var urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${imperial}&appid=${apiKey}`; // 5 day forecast
     //var urlForecastTest = `http://api.openweathermap.org/data/3.0/onecall?city=${city}&appid=${apiKey}&units=${imperial}`;
   console.log('check to see if city name is in url', urlCurrent); // city name is properly displayed in the url
   console.log('check to see if city name is in url', urlForecast); // city name is properly displayed in the url
@@ -303,7 +303,7 @@ function parseWeatherData(currentWeather) {
   
   //add code to display the weather icon
   
-  var iconUrl = `http://openweathermap.org/img/wn/${currentIcon}@4x.png`;
+  var iconUrl = `https://openweathermap.org/img/wn/${currentIcon}@4x.png`;
   var icon = document.querySelector('#current-icon');
   document.querySelector('#current-icon').style.display = 'block';
   icon.setAttribute('src', iconUrl);
