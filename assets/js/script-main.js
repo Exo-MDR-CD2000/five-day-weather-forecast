@@ -171,7 +171,7 @@ function processCitySearch(city) {
   })
 
   .then(function(data) {
-    console.log('Current weather:', data);
+    console.log('Current weather from raw fetch:', data);
     var currentWeather = data;
     parseWeatherData(currentWeather);
   })
@@ -183,20 +183,43 @@ function processCitySearch(city) {
 //i think this is how we did it in class above. below is the other way of doing it
 //though i still don't know what that => arrow function is doing
 
-  fetch(urlForecast)
-  .then((response) => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw new Error('Error:', response.statusText);
-    }
-  })
-  .then((data) => console.log('5 Day Forecast:', data)) //the fulfilled promise called '5 day forecast' is the data
-  .then((data) => parseForecastData(data)) //the fulfilled promise called '5 day forecast' is the data
-  .catch((error) => console.error(error));
-  //so i got fetching from user input to work. now i need to get the data from the api to display on the page
-    
-};
+fetch(urlForecast)
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('Error:', response.statusText);
+      }
+    })
+    .then(function(data) {
+      var currentForecast = data;
+      parseForecastData(currentForecast);
+      console.log('currrent Forecast from raw fetch:', currentForecast); // log currentForecast instead of parseForecastData 
+    })
+    .catch(error => console.error(error));
+  };
+
+
+
+  
+// fetch(urlForecast)
+// .then(function(response) {
+//   if (response.ok) {
+//     return response.json();
+//   } else {
+//     throw new Error('Error:', response.statusText);
+//   }
+// })
+
+// .then(function(data) { 
+//   connsole.log('5 Day Forecast:', data);
+//   var forecastData = data;
+//   parseForecastData(forecastData);
+// })
+
+// .catch(function(error) {
+//   console.log(error);
+// });
 
 
 // function parseCurrentweatherIcon(currentWeather) {
@@ -209,7 +232,7 @@ function processCitySearch(city) {
 //   console.log(icon);
   
   
-// }
+
 
 
 
@@ -285,9 +308,12 @@ function parseWeatherData(currentWeather) {
   
   
   
-}
+};
 
-// function parseForecastData(data) {
+function parseForecastData(currentForecast) {
+  console.log('parse forecast data to get needed info:', currentForecast);
+  
+};
 
 
   
