@@ -10,7 +10,7 @@ WIP
 
 ## Sources
 
-- [WIP](WIP)
+- [Github repo for all openweather icons](https://github.com/yuvraaaj/openweathermap-api-icons)
 
 - [JS Date Creation](https://www.freecodecamp.org/news/javascript-get-current-date-todays-date-in-js/)
 
