@@ -261,6 +261,10 @@ function parseWeatherData(currentWeather) {
   
   //add code to display the weather icon
   
+  var iconUrl = `http://openweathermap.org/img/wn/${currentIcon}@4x.png`;
+  var icon = document.querySelector('#current-icon');
+  document.querySelector('#current-icon').style.display = 'block';
+  icon.setAttribute('src', iconUrl);
   
   
   //parse the data from the api to display on the page
