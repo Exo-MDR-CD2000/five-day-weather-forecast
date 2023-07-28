@@ -372,7 +372,7 @@ function parseForecastData(currentForecast) {
   
   // Select the HTML elements by their IDs
 
-  //Day 1
+  //Day 1 query selectors
   var cd1 = document.querySelector('.card-title-1'); // cd1 = current date 1
   var ct1 = document.querySelector('#ct1'); // ct1 = current temp 1
   var cw1 = document.querySelector('#cw1'); // cw1 = current wind 1
@@ -381,14 +381,73 @@ function parseForecastData(currentForecast) {
   
   // Set the text content of the HTML elements
 
-  // Day 1
+  // Day 1 text content
   cd1.textContent = Object.keys(dailyWeather)[0]; // Set the date
   ct1.textContent = "Temp: " + dailyWeather[Object.keys(dailyWeather)[0]].temperature[0]; // Set the temperature
   cw1.textContent = "Wind: " + dailyWeather[Object.keys(dailyWeather)[0]].windSpeed + " mph"; // Set the wind speed
   ch1.textContent = "Humidity: " + dailyWeather[Object.keys(dailyWeather)[0]].humidity + "%"; // Set the humidity
 
 
- //
+ // Day 2 query selectors
+
+  var cd2 = document.querySelector('.card-title-2'); // cd2 = current date 2
+  var ct2 = document.querySelector('#ct2'); // ct2 = current temp 2
+  var cw2 = document.querySelector('#cw2'); // cw2 = current wind 2
+  var ch2 = document.querySelector('#ch2'); // ch2 = current humidity 2
+
+  
+  // Set the text content of the HTML elements
+
+  // Day 2 text content
+  cd2.textContent = Object.keys(dailyWeather)[1]; // Set the date
+  ct2.textContent = "Temp: " + dailyWeather[Object.keys(dailyWeather)[1]].temperature[0]; // Set the temperature
+  cw2.textContent = "Wind: " + dailyWeather[Object.keys(dailyWeather)[1]].windSpeed + " mph"; // Set the wind speed
+  ch2.textContent = "Humidity: " + dailyWeather[Object.keys(dailyWeather)[1]].humidity + "%"; // Set the humidity
+
+
+  // Day 3 query selectors
+
+  var cd3 = document.querySelector('.card-title-3'); // cd3 = current date 3
+  var ct3 = document.querySelector('#ct3'); // ct3 = current temp 3
+  var cw3 = document.querySelector('#cw3'); // cw3 = current wind 3
+  var ch3 = document.querySelector('#ch3'); // ch3 = current humidity 3
+
+  //Day 3 text content
+
+  cd3.textContent = Object.keys(dailyWeather)[2]; // Set the date
+  ct3.textContent = "Temp: " + dailyWeather[Object.keys(dailyWeather)[2]].temperature[0]; // Set the temperature
+  cw3.textContent = "Wind: " + dailyWeather[Object.keys(dailyWeather)[2]].windSpeed + " mph"; // Set the wind speed
+  ch3.textContent = "Humidity: " + dailyWeather[Object.keys(dailyWeather)[2]].humidity + "%"; // Set the humidity
+
+
+  // Day 4 query selectors
+
+  var cd4 = document.querySelector('.card-title-4'); // cd4 = current date 4
+  var ct4 = document.querySelector('#ct4'); // ct4 = current temp 4
+  var cw4 = document.querySelector('#cw4'); // cw4 = current wind 4
+  var ch4 = document.querySelector('#ch4'); // ch4 = current humidity 4
+
+  //Day 4 text content
+
+  cd4.textContent = Object.keys(dailyWeather)[3]; // Set the date
+  ct4.textContent = "Temp: " + dailyWeather[Object.keys(dailyWeather)[3]].temperature[0]; // Set the temperature
+  cw4.textContent = "Wind: " + dailyWeather[Object.keys(dailyWeather)[3]].windSpeed + " mph"; // Set the wind speed
+  ch4.textContent = "Humidity: " + dailyWeather[Object.keys(dailyWeather)[3]].humidity + "%"; // Set the humidity
+
+  // Day 5 query selectors
+
+  var cd5 = document.querySelector('.card-title-5'); // cd5 = current date 5
+  var ct5 = document.querySelector('#ct5'); // ct5 = current temp 5
+  var cw5 = document.querySelector('#cw5'); // cw5 = current wind 5
+  var ch5 = document.querySelector('#ch5'); // ch5 = current humidity 5
+
+  //Day 5 text content
+
+  cd5.textContent = Object.keys(dailyWeather)[4]; // Set the date
+  ct5.textContent = "Temp: " + dailyWeather[Object.keys(dailyWeather)[4]].temperature[0]; // Set the temperature
+  cw5.textContent = "Wind: " + dailyWeather[Object.keys(dailyWeather)[4]].windSpeed + " mph"; // Set the wind speed
+  ch5.textContent = "Humidity: " + dailyWeather[Object.keys(dailyWeather)[4]].humidity + "%"; // Set the humidity
+
 
 };
 
