@@ -4,7 +4,7 @@
 ## Description
 
 
-The goal was to create a site and have it display the current weather and the five day forecast for a city. It needed to be responsive and allow us to udnerstand how to use data from a third party api.
+The goal was to create a site and have it display the current weather and the five day forecast for a city. It needed to be responsive and allow us to udnerstand how to use data from a third party api. I was unable to display the entire forecast as it was eating into my project 1 activities. I had parsed the necessary data that needed to be displayhed in the forecast days but ran out of time. I also had some difficulty with the forecast icons as well but I will return to this project to finish it at a later date. For now, the current weather is displayed and the weather for the first forecast day. I also intend to clean the code by removing unecessary comments. No work was done into creating the localStorage component of the site which would have done towards the end. It would have utilized the unused "recent cities" button to display past searches from the user. I also wanted to tidy up the forecast containers as it is overhanging on the last day.
 
 
 
@@ -32,11 +32,11 @@ The goal was to create a site and have it display the current weather and the fi
 
 ## Screenshot
 
-![alt five day weather](WIP)
+![alt five day weather](./assets/images/five-day-forecast-site.png)
 
 ## Usage
 
-WIP
+Type in a city name and press ENTER or the search button. The current weather will be displayed and the five day forecast.
 
 ## Deployment Link
 
