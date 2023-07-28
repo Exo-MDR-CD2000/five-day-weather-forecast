@@ -369,6 +369,14 @@ function parseForecastData(currentForecast) {
   
   console.log('daily weather:', dailyWeather);
 
+
+  //reverse engineer code example above to understand how it grabs the data from the
+  //5 day forecast api. it seems to create an empty object called dailyWeather and then
+  //loops through the data to get the dates and then the temperature, wind speed, and humidity.
+  //it adds the temperature, wind speed, and humidity to the dailyWeather object
+  //but then also uses some math to find the max wind speed and humidity for the day.
+  //the temperature is already the max temperature for the day so it doesn't need to be found.
+
   
   // Select the HTML elements by their IDs
 
@@ -450,10 +458,3 @@ function parseForecastData(currentForecast) {
 
 
 };
-
-//reverse engineer code example above to understand how it grabs the data from the
-//5 day forecast api. it seems to create an empty object called dailyWeather and then
-//loops through the data to get the dates and then the temperature, wind speed, and humidity.
-//it adds the temperature, wind speed, and humidity to the dailyWeather object
-//but then also uses some math to find the max wind speed and humidity for the day.
-//the temperature is already the max temperature for the day so it doesn't need to be found.
