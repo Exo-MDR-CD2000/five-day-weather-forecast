@@ -373,7 +373,7 @@ function parseForecastData(currentForecast) {
   // Select the HTML elements by their IDs
 
   //Day 1
-  var cd1 = document.querySelector('#cd1'); // cd1 = current date 1
+  var cd1 = document.querySelector('.card-title-1'); // cd1 = current date 1
   var ct1 = document.querySelector('#ct1'); // ct1 = current temp 1
   var cw1 = document.querySelector('#cw1'); // cw1 = current wind 1
   var ch1 = document.querySelector('#ch1'); // ch1 = current humidity 1
@@ -381,6 +381,14 @@ function parseForecastData(currentForecast) {
   
   // Set the text content of the HTML elements
 
+  // Day 1
+  cd1.textContent = Object.keys(dailyWeather)[0]; // Set the date
+  ct1.textContent = "Temp: " + dailyWeather[Object.keys(dailyWeather)[0]].temperature[0]; // Set the temperature
+  cw1.textContent = "Wind: " + dailyWeather[Object.keys(dailyWeather)[0]].windSpeed + " mph"; // Set the wind speed
+  ch1.textContent = "Humidity: " + dailyWeather[Object.keys(dailyWeather)[0]].humidity + "%"; // Set the humidity
+
+
+ //
 
 };
 
