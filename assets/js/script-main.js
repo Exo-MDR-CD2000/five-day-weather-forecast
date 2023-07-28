@@ -457,4 +457,11 @@ function parseForecastData(currentForecast) {
   ch5.textContent = "Humidity: " + dailyWeather[Object.keys(dailyWeather)[4]].humidity + "%"; // Set the humidity
 
 
+
+  //icon query selectors
+
+  
+
+
+  //Maybe it's possible to optimize the code above by using a for loop?
 };
