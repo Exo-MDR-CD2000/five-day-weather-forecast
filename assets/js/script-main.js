@@ -368,6 +368,20 @@ function parseForecastData(currentForecast) {
   }
   
   console.log('daily weather:', dailyWeather);
+
+  
+  // Select the HTML elements by their IDs
+
+  //Day 1
+  var cd1 = document.querySelector('#cd1'); // cd1 = current date 1
+  var ct1 = document.querySelector('#ct1'); // ct1 = current temp 1
+  var cw1 = document.querySelector('#cw1'); // cw1 = current wind 1
+  var ch1 = document.querySelector('#ch1'); // ch1 = current humidity 1
+
+  
+  // Set the text content of the HTML elements
+
+
 };
 
 //reverse engineer code example above to understand how it grabs the data from the
