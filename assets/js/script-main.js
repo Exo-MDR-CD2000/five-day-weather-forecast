@@ -363,10 +363,12 @@ function parseForecastData(currentForecast) {
     // Find the maximum wind speed and humidity for the day
     const maxWindSpeed = Math.max(...dailyWeather[date].windSpeed);
     const maxHumidity = Math.max(...dailyWeather[date].humidity);
+    const maxTemperature = Math.max(...dailyWeather[date].temperature);
     
     // Update the dailyWeather object with the maximum wind speed and humidity
     dailyWeather[date].windSpeed = maxWindSpeed;
     dailyWeather[date].humidity = maxHumidity;
+    dailyWeather[date].temperature = maxTemperature;
   }
   
   console.log('daily weather:', dailyWeather);
